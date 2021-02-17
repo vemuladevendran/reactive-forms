@@ -23,7 +23,7 @@
                 <!-- mobile number and age details -->
                 <div class="col-12 d-sm-flex">
                     <div class="col-12 col-sm-6">
-                        <mat-form-field appearance="standard">
+                        <mat-form-field appearance="standard" floatLabel="always">
                             <mat-label>Mobile</mat-label>
                             <input matInput placeholder="Mobile number" formControlName="MobileNumber" ng2TelInput>
                         </mat-form-field>
@@ -31,7 +31,7 @@
                     <div class="col-12 col-sm-6">
                         <mat-form-field appearance="fill">
                             <mat-label>Date of birth</mat-label>
-                            <input matInput [matDatepicker]="picker" formControlName="DOB">
+                            <input matInput [matDatepicker]="picker" formControlName="DOB" readonly>
                             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                             <mat-datepicker #picker></mat-datepicker>
                         </mat-form-field>

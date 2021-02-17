@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,25 +10,27 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
   // password toggel
-   hide = true;
+  hide = true;
 
   //  form details
-   signupForm = new FormGroup({
+  signupForm = new FormGroup({
     FirstName: new FormControl('devendran', [Validators.required, Validators.minLength(2)]),
     LastName: new FormControl('vemula', [Validators.required]),
     MobileNumber: new FormControl('9445296380', [Validators.required, Validators.maxLength(10)]),
     DOB: new FormControl('', Validators.required),
     email: new FormControl('devendranvemula@gmail.com', Validators.required),
     password: new FormControl('deva123', [Validators.required, Validators.minLength(6)]),
-   });
+  });
   constructor(
+    private router: Router
   ) { }
 
   ngOnInit(): void {
   }
 
-  handlesubmit(): void{
+  handlesubmit(): void {
     console.log(this.signupForm.value);
+    this.router.navigate(['/login'])
   }
 
 }
