@@ -25,7 +25,7 @@
                     <div class="col-12 col-sm-6">
                         <mat-form-field appearance="standard">
                             <mat-label>Mobile</mat-label>
-                            <input matInput placeholder="Mobile number" formControlName="MobileNumber">
+                            <input matInput placeholder="Mobile number" formControlName="MobileNumber" ng2TelInput>
                         </mat-form-field>
                     </div>
                     <div class="col-12 col-sm-6">
@@ -88,10 +88,10 @@
                 <!-- login buttons -->
                 <div class="col-12 d-flex">
                     <div class="col-6">
-                        <button mat-raised-button color="primary" [disabled]=signupForm.invalid>SIGNUP</button>
+                        <button  class="w-100" mat-raised-button color="primary" [disabled]=signupForm.invalid>SIGNUP</button>
                     </div>
                     <div class="col-6">
-                        <a mat-button routerLink=".">LOGIN</a>
+                        <a mat-button routerLink="/login">LOGIN</a>
                     </div>
                 </div>
             </form>
