@@ -22,10 +22,6 @@ export class SignupComponent implements OnInit {
     email: new FormControl('devendranvemula@gmail.com', Validators.required),
     password: new FormControl('deva123', [Validators.required, Validators.minLength(6)]),
     gender: new FormControl(),
-
-    // DatePicker
-    date: new FormControl(new Date()),
-    serializedDate: new FormControl((new Date()).toISOString()),
   });
   constructor(
     private router: Router,

@@ -1,5 +1,5 @@
 import { Route } from '@angular/compiler/src/core';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
@@ -20,6 +20,8 @@ import {Ng2TelInputModule} from 'ng2-tel-input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatRadioModule} from '@angular/material/radio';
 import { UserlistComponent } from './userlist/userlist.component';
+import { PromisedataComponent } from './promisedata/promisedata.component';
+import { LoaderComponent } from './loader/loader.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -34,8 +36,16 @@ const routes: Routes = [
     component: UserlistComponent,
   },
   {
+    path: 'promisedata',
+    component: PromisedataComponent,
+  },
+  {
+    path: 'loader',
+    component: LoaderComponent,
+  },
+  {
     path: '**',
-    redirectTo: 'signup'
+    redirectTo: '/promisedata'
   }
 ];
 
@@ -45,6 +55,8 @@ const routes: Routes = [
     LoginComponent,
     SignupComponent,
     UserlistComponent,
+    PromisedataComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,

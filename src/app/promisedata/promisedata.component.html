@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-12">
+            <app-loader *ngIf="displayloader"></app-loader>
+            <table>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        NAME
+                    </th>
+                    <th>
+                        USER NAME </th>
+                </tr>
+                <tr *ngFor="let h of promisedata">
+                    <td>
+                        {{h.id}}
+                    </td>
+                    <td>
+                        {{h.name}}
+                    </td>
+                    <td>
+                        {{h.username}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
