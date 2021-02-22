@@ -18,6 +18,8 @@ import {MatButtonModule} from '@angular/material/button';
 // import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import {Ng2TelInputModule} from 'ng2-tel-input';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatRadioModule} from '@angular/material/radio';
+import { UserlistComponent } from './userlist/userlist.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -27,9 +29,13 @@ const routes: Routes = [
     path: 'signup',
     component: SignupComponent,
   },
+   {
+    path: 'userlist',
+    component: UserlistComponent,
+  },
   {
     path: '**',
-    redirectTo: '/login'
+    redirectTo: 'signup'
   }
 ];
 
@@ -38,6 +44,7 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     SignupComponent,
+    UserlistComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +60,7 @@ const routes: Routes = [
     MatButtonModule,
     Ng2TelInputModule,
     MatToolbarModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

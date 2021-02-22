@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-12">
+            <table>
+                <tr>
+                    <th *ngFor="let h of details | keyvalue">
+                        {{h.key}}
+                    </th>
+                </tr>
+                <tr>
+                    <td *ngFor="let h of details | keyvalue">
+                        <span *ngIf="h.key === 'DOB'">
+                            {{h.value | date}}
+                        </span>
+
+                        <span *ngIf="h.key !== 'DOB'">
+                            {{h.value}}
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
